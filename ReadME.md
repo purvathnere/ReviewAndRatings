@@ -29,8 +29,8 @@ This is a simple full-stack web application that allows users to give **ratings*
 
 ## 📁 Folder Structure
 
-/frontend => React frontend code
-/backend => Node.js Express backend
+- /frontend => React frontend code
+- /backend => Node.js Express backend
 
 
 
@@ -61,14 +61,16 @@ App runs at: http://localhost:3000
 
 ## Database
 
-Database Setup (MySQL)
+### Database Setup (MySQL)
 🔧 Step 1: Create the Database
 Open MySQL and run:
 
-
+```
 CREATE DATABASE IF NOT EXISTS product_reviews;
-🧱 Step 2: Create Tables
+```
 
+🧱 Step 2: Create Tables
+```
 USE product_reviews;
 
 CREATE TABLE products (
@@ -85,6 +87,7 @@ CREATE TABLE reviews (
   photo_url TEXT,
   UNIQUE KEY unique_user_review (product_id, user)
 );
+```
  Step 3: Configure DB Connection
 In backend/db.js, update:
 
